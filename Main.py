@@ -23,7 +23,7 @@ from gtts import gTTS
 from randomuser import RandomUser
 from pythonping import ping as pyping
 
-ctypes.windll.kernel32.SetConsoleTitleW(f'[Flash Server Wizz Tool v{ServerNuker.__version__}] | Loading in...')
+ctypes.windll.kernel32.SetConsoleTitleW(f'[Husk Nuker v{ServerNuker.__version__}] | Loading in...')
 
 with open('config.json') as f:
     config = json.load(f)
@@ -43,8 +43,8 @@ print(f'''{Fore.RESET}
                      {Fore.YELLOW}░ ░   ░   ░   ▒      ░   ░ ░ ░ ░   ░ ░  ░  ░    ░       ░░░ ░ ░  ░  ░░ ░ ░  ░░ ░
                      {Fore.YELLOW}      ░       ░  ░         ░       ░       ░              ░      ░  ░  ░ ░  ░  ░
                                 
-                        {Fore.RED}Logged In As ==> {Fore.WHITE}{Husk.user.name}#{Husk.user.discriminator}{Fore.WHITE}
-                        {Fore.RED}ID ==> {Fore.WHITE}{Husk.user.id}
+                        {Fore.RED}Logged In As ==> {Fore.WHITE}{Ioxide.user.name}#{Ioxide.user.discriminator}{Fore.WHITE}
+                        {Fore.RED}ID ==> {Fore.WHITE}{Ioxide.user.id}
                         {Fore.RED}Version ==> {Fore.WHITE} v{ServerNuker.__version__}
                     '''+Fore.RESET)
 def Clear():
@@ -58,7 +58,7 @@ def Init():
     else:
         token = config.get('token')
         try:
-            Husk.run(token, bot=False, reconnect=True)
+            Ioxide.run(token, bot=False, reconnect=True)
             os.system(f'title [ Husk SelfBot ] - Version {ServerNuker.__version__}')
         except discord.errors.LoginFailure:
             print(f"{Fore.WHITE}[ERROR] {Fore.YELLOW}Sure this is a token? lol"+Fore.RESET)
@@ -77,16 +77,16 @@ class Login(discord.Client):
         await self.logout()
 
 colorama.init()
-Husk = discord.Client()
-Husk = commands.Bot(
+Ioxide = discord.Client()
+Ioxide = commands.Bot(
     description='Flash Bot',
     command_prefix=prefix,
     self_bot=True
 )
 
-Husk.remove_command('help') 
+Ioxide.remove_command('help') 
 
-@Husk.event
+@Ioxide.event
 async def on_command_error(ctx, error):
     error_str = str(error)
     error = getattr(error, 'original', error)
@@ -105,9 +105,9 @@ async def on_command_error(ctx, error):
     else:
         print(f"{Fore.WHITE}Error: {Fore.YELLOW}{error_str}"+Fore.RESET)
 
-@Husk.event
+@Ioxide.event
 async def on_message_edit(before, after):
-    await Husk.process_commands(after)
+    await Ioxide.process_commands(after)
 
                    
         

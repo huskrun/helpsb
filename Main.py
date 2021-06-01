@@ -215,7 +215,7 @@ async def anal(ctx, recipients):
 async def afk(ctx):
     await ctx.message.delete()
     em = discord.Embed(title="_AFK Help_",color= discord.Color(0x000000))
-    em.add_field(name="_*AfkCheck*_",value="Starts an afk check",inline=False)
+    em.add_field(name="_*AfkCheck*_",value="command to start afk check is check",inline=False)
     em.set_image(url="https://th.bing.com/th/id/R6ed648f7d41f0bd49e95eea92a5096fa?rik=Ku4ROAbHlnQwDQ&riu=http%3a%2f%2fmedia.tumblr.com%2fc6c6f373d03528900989ebcebf7d68db%2ftumblr_inline_mgcwr5fTX41r5xob1.gif&ehk=9jcELZjqk32CvllIdIGmPWY2kuQGoFiYE1NbaCp1cAk%3d&risl=&pid=ImgRaw")
     em.set_footer(text="dont fold lmfao")
     await ctx.send(embed=em)
@@ -232,8 +232,8 @@ async def joke(ctx):
 async def wizzing(ctx):
     await ctx.message.delete()
     em = discord.Embed(title="_*Wizzing Help*_",color= discord.Color(0x000000))
-    em.add_field(name="_*Destroy*_",value="Fucks a servers channels and roles",inline=False)
-    em.set_image(url="https://th.bing.com/th/id/R4a73125a26126125066358201afc51ed?rik=Vj4MLyxsNiw4Rw&pid=ImgRaw")
+    em.add_field(name="_*Destroy*_",value="Commands are Fog doafredo and ruinserver",inline=False)
+    em.set_image(url="https://66.media.tumblr.com/d55c5e82efad0444fce2238d967f5380/tumblr_n4ar9qALhp1tr6879o1_500.gif")
     em.set_footer(text="YOUR DONE FOR SON LOL")
     await ctx.send(embed=em)
 @Ioxide.command()

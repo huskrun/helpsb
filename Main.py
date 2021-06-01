@@ -174,4 +174,4 @@ async def on_connect():
     ctypes.windll.kernel32.SetConsoleTitleW(f'[ Flash Nuker Tool v{ServerNuker.__version__} ] | Logged in as {Ioxide.user.name}')
     
     if __name__ == '__main__':
-    Init()
+        Init()

@@ -174,15 +174,12 @@ async def on_connect():
 @Ioxide.command()
 async def help(ctx):
     await ctx.message.delete()
-    em = discord.Embed(title="_SPEED FORCE_",color= discord.Color(0x000000))
-    em.add_field(name="_*Banning*_",value="Zoom",inline=False)
-    em.add_field(name="_*Kicking*_",value="Savitar",inline=False)
-    em.add_field(name="_*AntiAfk*_",value="Reverse Flash",inline=False)
-    em.add_field(name="_*Wizzing*_",value="Trajectory",inline=False)
-    em.add_field(name="_*Trolling*_",value="Impulse",inline=False)
-    em.add_field(name="_*NSFW*_",value="Kid Flash",inline=False)
+    em = discord.Embed(title="_Husk Runs You_",color= discord.Color(0x000000))
+    em.add_field(name="_*Banning*_",value="Bans Them Bitches",inline=False)
+    em.add_field(name="_*Kicking*_",value="Give Them Bitches The Boot",inline=False)
+    em.add_field(name="_*Wizzing*_",value="GET FUCKED",inline=False)
     em.set_image(url="https://media3.giphy.com/media/11yjQeATzTIQcRqkT8/giphy.gif?cid=790b76118cc5395898082e76801c9257c217c0e4fdc0445c&rid=giphy.gif&ct=g")
-    em.set_footer(text="My goals are beyond your understanding")
+    em.set_footer(text="Cool Kid W")
     await ctx.send(embed=em)
 @Ioxide.command()
 async def fuck(ctx, recipients):
@@ -219,7 +216,7 @@ async def afk(ctx):
     await ctx.message.delete()
     em = discord.Embed(title="_AFK Help_",color= discord.Color(0x000000))
     em.add_field(name="_*AfkCheck*_",value="Starts an afk check",inline=False)
-    em.set_image(url="https://static.comicvine.com/uploads/original/11133/111330189/6981553-th.gif")
+    em.set_image(url="https://th.bing.com/th/id/R6ed648f7d41f0bd49e95eea92a5096fa?rik=Ku4ROAbHlnQwDQ&riu=http%3a%2f%2fmedia.tumblr.com%2fc6c6f373d03528900989ebcebf7d68db%2ftumblr_inline_mgcwr5fTX41r5xob1.gif&ehk=9jcELZjqk32CvllIdIGmPWY2kuQGoFiYE1NbaCp1cAk%3d&risl=&pid=ImgRaw")
     em.set_footer(text="dont fold lmfao")
     await ctx.send(embed=em)
 @Ioxide.command(aliases=['sayajoke','jokepack'])
@@ -236,8 +233,8 @@ async def wizzing(ctx):
     await ctx.message.delete()
     em = discord.Embed(title="_*Wizzing Help*_",color= discord.Color(0x000000))
     em.add_field(name="_*Destroy*_",value="Fucks a servers channels and roles",inline=False)
-    em.set_image(url="https://pa1.narvii.com/7021/e49f24272192348a72b91e758223b2a05486aeber1-540-304_hq.gif")
-    em.set_footer(text="Dont let this happen to u lol")
+    em.set_image(url="https://th.bing.com/th/id/R4a73125a26126125066358201afc51ed?rik=Vj4MLyxsNiw4Rw&pid=ImgRaw")
+    em.set_footer(text="YOUR DONE FOR SON LOL")
     await ctx.send(embed=em)
 @Ioxide.command()
 async def check(ctx):
@@ -270,24 +267,7 @@ async def check(ctx):
 async def blood(ctx):
     await ctx.message.delete()
     em = discord.Embed(title="_GET YOUR LIFE BACK IN BLOOD_",color= discord.Color(0x000000))
-    em.set_image(url="https://media1.tenor.com/images/e51a753d53c7068add1e99a6ef92031c/tenor.gif?itemid=6184096")
-    await ctx.send(embed=em)
-    
-@Ioxide.command()
-async def smoke(ctx):
-    await ctx.message.delete()
-    em = discord.Embed(title="_WHO I SMOKE???_",color= discord.Color(0x000000))
-    em.add_field(name="_*My Sons*_",value="Flex, Zeus Account, Shirus, Skeezer, Kami",inline=False)
-    await ctx.send(embed=em)
-    
-    
-@Ioxide.command()
-async def maker(ctx):
-    await ctx.message.delete()
-    em = discord.Embed(title="_GodSpeed_",color= discord.Color(0x000000))
-    em.add_field(name="_**Flash Owns You**_",value="ScreamW",inline=False)
-    em.set_image(url="https://78.media.tumblr.com/91b0bb5140c2641996febba9e9a32033/tumblr_p5k3vxUFrz1uwyauro1_r1_540.gif")
-    em.set_footer(text="Made By The Speedsters")
+    em.set_image(url="https://wallpapercave.com/wp/wp7535190.gif")
     await ctx.send(embed=em)
 @Ioxide.command()
 async def cum(ctx, recipients):
@@ -385,11 +365,11 @@ async def hammer(ctx, recipients):
     await ctx.message.delete() 
     if isinstance(ctx.message.channel, discord.GroupChannel):
         em = discord.Embed(description=Ioxide.user.name+' _**gave**_ '+recipients+' _**a death punch**_', color= discord.Color(0x000000))
-        em.set_image(url="https://78.media.tumblr.com/37dadedf277dd7c06d802130225cf5fb/tumblr_inline_o3346rGusF1r8a94o_500.gif")
+        em.set_image(url="https://s-media-cache-ak0.pinimg.com/originals/59/b2/4f/59b24ffd6ac6d965ff34d642944a72e5.gif")
 
     elif isinstance(ctx.message.channel, discord.DMChannel):
         em = discord.Embed(description=Ioxide.user.name+' _**punched**_ '+recipients+' _**lights out**_ ', color= discord.Color(0x000000))
-        em.set_image(url="https://78.media.tumblr.com/37dadedf277dd7c06d802130225cf5fb/tumblr_inline_o3346rGusF1r8a94o_500.gif")
+        em.set_image(url="https://s-media-cache-ak0.pinimg.com/originals/59/b2/4f/59b24ffd6ac6d965ff34d642944a72e5.gif")
     await ctx.send(embed=em) 
 @Ioxide.command(aliases=['serverdestroy','ruinserver','doafredo'])
 async def Fog(ctx):

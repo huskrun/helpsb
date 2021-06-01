@@ -43,7 +43,7 @@ print(f'''{Fore.RESET}
                      {Fore.YELLOW}░ ░   ░   ░   ▒      ░   ░ ░ ░ ░   ░ ░  ░  ░    ░       ░░░ ░ ░  ░  ░░ ░ ░  ░░ ░
                      {Fore.YELLOW}      ░       ░  ░         ░       ░       ░              ░      ░  ░  ░ ░  ░  ░
                                 
-                            {Fore.RED}Logged In As ==> {Fore.WHITE}{Husk.user.name}#{Husk.user.discriminator}{Fore.WHITE}
+                        {Fore.RED}Logged In As ==> {Fore.WHITE}{Husk.user.name}#{Husk.user.discriminator}{Fore.WHITE}
                         {Fore.RED}ID ==> {Fore.WHITE}{Husk.user.id}
                         {Fore.RED}Version ==> {Fore.WHITE} v{ServerNuker.__version__}
                     '''+Fore.RESET)
@@ -58,7 +58,7 @@ def Init():
     else:
         token = config.get('token')
         try:
-            husk.run(token, bot=False, reconnect=True)
+            Husk.run(token, bot=False, reconnect=True)
             os.system(f'title [ Husk SelfBot ] - Version {ServerNuker.__version__}')
         except discord.errors.LoginFailure:
             print(f"{Fore.WHITE}[ERROR] {Fore.YELLOW}Sure this is a token? lol"+Fore.RESET)
@@ -83,6 +83,31 @@ Husk = commands.Bot(
     command_prefix=prefix,
     self_bot=True
 )
+
+Husk.remove_command('help') 
+
+@Husk.event
+async def on_command_error(ctx, error):
+    error_str = str(error)
+    error = getattr(error, 'original', error)
+    if isinstance(error, commands.CommandNotFound):
+        return
+    elif isinstance(error, commands.CheckFailure):
+        print(f"{Fore.WHITE}Error: {Fore.YELLOW}You're missing permission to execute this command"+Fore.RESET)
+    elif isinstance(error, commands.MissingRequiredArgument):
+        print(f"{Fore.WHITE}Error: {Fore.YELLOW}Missing arguments: {error}"+Fore.RESET)
+    elif isinstance(error, numpy.AxisError):
+        print(f"{Fore.WHITE}Error: {Fore.YELLOW}Not a valid image"+Fore.RESET)
+    elif isinstance(error, discord.errors.Forbidden):
+        print(f"{Fore.WHITE}Error: {Fore.YELLOW}Discord error: {error}"+Fore.RESET)
+    elif "Cannot send an empty message" in error_str:
+        print(f"{Fore.WHITE}Error: {Fore.YELLOW}Couldnt send a empty message"+Fore.RESET)               
+    else:
+        print(f"{Fore.WHITE}Error: {Fore.YELLOW}{error_str}"+Fore.RESET)
+
+@Husk.event
+async def on_message_edit(before, after):
+    await Husk.process_commands(after)
 
                    
         

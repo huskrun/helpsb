@@ -45,8 +45,10 @@ print(f'''{Fore.RESET}
                                 
                         {Fore.RED}Logged In As ==> {Fore.WHITE}{Ioxide.user.name}#{Ioxide.user.discriminator}{Fore.WHITE}
                         {Fore.RED}ID ==> {Fore.WHITE}{Ioxide.user.id}
+                        {Fore.RED}Anti-AFK ==> {Fore.WHITE}{antiafk}
                         {Fore.RED}Version ==> {Fore.WHITE} v{ServerNuker.__version__}
                     '''+Fore.RESET)
+
 def Clear():
     os.system('cls')
 Clear()

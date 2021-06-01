@@ -32,7 +32,7 @@ token = config.get('token')
 password = config.get('pass')
 prefix = config.get('prefix')
 
-     print(f'''{Fore.RESET}
+print(f'''{Fore.RESET}
                      {Fore.YELLOW}▄████  ▄▄▄       ███▄    █   ▄████   ██████ ▄▄▄█████▓ █    ██  ██░ ██  ██░ ██ 
                      {Fore.YELLOW}██▒ ▀█▒▒████▄     ██ ▀█   █  ██▒ ▀█▒▒██    ▒ ▓  ██▒ ▓▒ ██  ▓██▒▓██░ ██▒▓██░ ██▒
                      {Fore.YELLOW}▒██░▄▄▄░▒██  ▀█▄  ▓██  ▀█ ██▒▒██░▄▄▄░░ ▓██▄   ▒ ▓██░ ▒░▓██  ▒██░▒██▀▀██░▒██▀▀██░

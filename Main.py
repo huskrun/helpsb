@@ -23,7 +23,7 @@ from gtts import gTTS
 from randomuser import RandomUser
 from pythonping import ping as pyping
 
-ctypes.windll.kernel32.SetConsoleTitleW(f'[Flash Server Wizz Tool v{ServerNuker.__version__}] | Loading in...')
+ctypes.windll.kernel32.SetConsoleTitleW(f'[Husk Nuker Tool v{ServerNuker.__version__}] | Loading in...')
 
 with open('config.json') as f:
     config = json.load(f)
@@ -169,7 +169,7 @@ async def on_connect():
         antiafk = "Disabled"
 
     startprint()
-    ctypes.windll.kernel32.SetConsoleTitleW(f'[ Flash Nuker Tool v{ServerNuker.__version__} ] | Logged in as {Ioxide.user.name}')
+    ctypes.windll.kernel32.SetConsoleTitleW(f'[ Husk Selfbot v{ServerNuker.__version__} ] | Logged in as {Ioxide.user.name}')
 
 @Ioxide.command()
 async def help(ctx):

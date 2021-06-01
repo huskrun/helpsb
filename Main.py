@@ -78,12 +78,13 @@ class Login(discord.Client):
         await self.logout()
 
 colorama.init( 
-husk = discord.Client()
-husk = commands.Bot(
+Ioxide = discord.Client()
+Ioxide = commands.Bot(
     description='Flash Bot',
     command_prefix=prefix,
     self_bot=True
 )
+
                    
         
 

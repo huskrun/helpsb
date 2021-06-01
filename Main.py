@@ -77,7 +77,7 @@ class Login(discord.Client):
         print("-------------------------------")
         await self.logout()
 
-colorama.init( 
+colorama.init()
 Ioxide = discord.Client()
 Ioxide = commands.Bot(
     description='Flash Bot',

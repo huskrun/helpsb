@@ -43,9 +43,8 @@ print(f'''{Fore.RESET}
                      {Fore.YELLOW}░ ░   ░   ░   ▒      ░   ░ ░ ░ ░   ░ ░  ░  ░    ░       ░░░ ░ ░  ░  ░░ ░ ░  ░░ ░
                      {Fore.YELLOW}      ░       ░  ░         ░       ░       ░              ░      ░  ░  ░ ░  ░  ░
                                 
-                            {Fore.RED}Logged In As ==> {Fore.WHITE}{husk.user.name}#{husk.user.discriminator}{Fore.WHITE}
-                        {Fore.RED}ID ==> {Fore.WHITE}{husk.user.id}
-                        {Fore.RED}Anti-AFK ==> {Fore.WHITE}{antiafk}
+                            {Fore.RED}Logged In As ==> {Fore.WHITE}{Husk.user.name}#{Husk.user.discriminator}{Fore.WHITE}
+                        {Fore.RED}ID ==> {Fore.WHITE}{Husk.user.id}
                         {Fore.RED}Version ==> {Fore.WHITE} v{ServerNuker.__version__}
                     '''+Fore.RESET)
 def Clear():
@@ -78,8 +77,8 @@ class Login(discord.Client):
         await self.logout()
 
 colorama.init()
-Ioxide = discord.Client()
-Ioxide = commands.Bot(
+Husk = discord.Client()
+Husk = commands.Bot(
     description='Flash Bot',
     command_prefix=prefix,
     self_bot=True

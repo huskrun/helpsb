@@ -32,7 +32,11 @@ token = config.get('token')
 password = config.get('pass')
 prefix = config.get('prefix')
 
-print(f'''{Fore.RESET}
+width = os.get_terminal_size().columns  
+def startprint():
+    
+    
+    print(f'''{Fore.RESET}
                      {Fore.YELLOW}▄████  ▄▄▄       ███▄    █   ▄████   ██████ ▄▄▄█████▓ █    ██  ██░ ██  ██░ ██ 
                      {Fore.YELLOW}██▒ ▀█▒▒████▄     ██ ▀█   █  ██▒ ▀█▒▒██    ▒ ▓  ██▒ ▓▒ ██  ▓██▒▓██░ ██▒▓██░ ██▒
                      {Fore.YELLOW}▒██░▄▄▄░▒██  ▀█▄  ▓██  ▀█ ██▒▒██░▄▄▄░░ ▓██▄   ▒ ▓██░ ▒░▓██  ▒██░▒██▀▀██░▒██▀▀██░
@@ -48,6 +52,8 @@ print(f'''{Fore.RESET}
                         {Fore.RED}Anti-AFK ==> {Fore.WHITE}{antiafk}
                         {Fore.RED}Version ==> {Fore.WHITE} v{ServerNuker.__version__}
                     '''+Fore.RESET)
+    
+
 
 def Clear():
     os.system('cls')
@@ -81,7 +87,7 @@ class Login(discord.Client):
 colorama.init()
 Ioxide = discord.Client()
 Ioxide = commands.Bot(
-    description='Flash Bot',
+    description='Husk Bot',
     command_prefix=prefix,
     self_bot=True
 )

